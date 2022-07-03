@@ -1,0 +1,52 @@
+.App {
+  text-align: center;
+}
+body{
+  color: #561643;
+ background-image: url("./components/clouds.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+
+}
+span{
+  color: black;
+  font-weight: bold;
+}
+.card{
+  width: 80%;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 100px;
+  background-color:white;
+  border-radius: 30px;
+}
+.horizontal{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.cardInside{
+  width: 80%;
+  background-color: transparent;
+}
+ul{
+  text-align: left;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+button{
+  background-color: #561643;
+  color: white;
+  font-weight: bold;
+  border: none;
+  height: 35px;
+  border-radius: 10px;
+}
+button:hover{
+  cursor: pointer;
+  background-color: white;
+  color: #561643;
+  border: 2px solid #561643;
+  font-weight: bold;
+}
