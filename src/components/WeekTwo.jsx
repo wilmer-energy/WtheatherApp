@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import cloudImg from './imagenes/Cloud.png'
 
 const EntregableSemana2 = () => {
 
@@ -53,8 +54,8 @@ setDegree(!degree)
                 <h2>{wheater?.name}</h2>
             </div>
             <div className='horizontal'>
-                <div className='cardInside'>
-                    <img src="./imagenes/Cloud.png" alt=""/>
+                <div className='cardInside cloud'>
+                    <img src={cloudImg} alt=""/>
                     <span>{degree? celcius +" °C":fahrenheit +" °F"}</span>
                 </div>
                 <div className='cardInside'>
