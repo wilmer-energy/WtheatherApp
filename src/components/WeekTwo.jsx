@@ -26,6 +26,7 @@ const EntregableSemana2 = () => {
             axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${crd.latitude}&lon=${crd.longitude}&appid=14d0cc4474dd79a6e6352e4ec922768b`)
                 .then(res => {
                     setWheater(res.data)
+                    console.log(res.data)
 
                 })
 
@@ -51,7 +52,7 @@ setDegree(!degree)
             
             <div>
                 <h1>Wheather app</h1>
-                <h2>{wheater?.name}</h2>
+                <h2>{wheater?.name} {wheater.sys?.country}</h2>
             </div>
             <div className='horizontal'>
                 <div className='cardInside cloud'>
