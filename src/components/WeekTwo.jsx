@@ -6,7 +6,7 @@ import cloudImg from './imagenes/Cloud.png'
 const EntregableSemana2 = () => {
 
     const [wheater, setWheater] = useState({});
-    let [degree,setDegree]=useState(true)
+    let [degree, setDegree] = useState(true)
 
     useEffect(() => {
         const options = {
@@ -39,25 +39,31 @@ const EntregableSemana2 = () => {
 
         navigator.geolocation.getCurrentPosition(success, error, options);
     }, [])
-let celcius=wheater.main?.temp-273.15
-let fahrenheit=celcius*9/5+32
+    let celcius = wheater.main?.temp - 273.15
+    let fahrenheit = celcius * 9 / 5 + 32
 
-const changeDegree=()=>{
-setDegree(!degree)
-}
+    const changeDegree = () => {
+        setDegree(!degree)
+    }
 
     return (
 
         <div className='card'>
-            
+
             <div>
-                <h1>Wheather app</h1>
+                <h1>Weather app</h1>
                 <h2>{wheater?.name} {wheater.sys?.country}</h2>
             </div>
             <div className='horizontal'>
                 <div className='cardInside cloud'>
-                    <img src={cloudImg} alt=""/>
-                    <span>{degree? celcius +" °C":fahrenheit +" °F"}</span>
+                    <div class="turnRigth">
+                        <div class="circule"> </div>
+                    </div>
+                    <div class="turnLeft">
+                        <div class="circule"> </div>
+                    </div>
+                    <img src={cloudImg} alt="" />
+                    <span>{degree ? celcius + " °C" : fahrenheit + " °F"}</span>
                 </div>
                 <div className='cardInside'>
                     <h2>{wheater.weather?.[0].description}</h2>
@@ -68,9 +74,9 @@ setDegree(!degree)
                     </ul>
                 </div>
             </div>
-            <br/>
+            <br />
             <button onClick={changeDegree}>Degrees °F/°C</button>
-            <br/>
+            <br />
         </div>
 
 
